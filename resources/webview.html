@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>sketch-slice-plugin</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    sketch-slice-plugin
+
+    <div>
+      <div class="box">
+        <h1>请输入切片大小</h1>
+        <label>宽度：</label>
+        <input type="number" placeholder="单位：px" id="inputWidth" />
+        <br />
+        <label>高度：</label>
+        <input type="number" placeholder="单位：px" id="inputHeight" />
+        <br />
+        <label class="attr-name">导出图片类型</label>
+        <br />
+        <input
+          id="png"
+          class="formats"
+          type="checkbox"
+          checked="value"
+          value="png"
+        />
+        <label>png</label>
+        <br />
+        <input
+          id="jpg"
+          class="formats"
+          type="checkbox"
+          checked="value"
+          value="jpg"
+        />
+        <label>jpg</label>
+        <input
+          id="svg"
+          class="formats"
+          type="checkbox"
+          checked="value"
+          value="svg"
+        />
+        <label>svg</label>
+        <br />
+        <input
+          id="scale1x"
+          class="scales"
+          type="checkbox"
+          checked="value"
+          value="1"
+        />
+        <label>@1x</label>
+        <br />
+        <input
+          id="scale2x"
+          class="scales"
+          type="checkbox"
+          checked="value"
+          value="2"
+        />
+        <label>@2x</label>
+        <input
+          id="scale3x"
+          class="scales"
+          type="checkbox"
+          checked="value"
+          value="3"
+        />
+        <label>@3x</label>
+        <br />
+        <button id="btnExport">导出切片</button>
+      </div>
+    </div>
+    <div id="answer"></div>
+
+    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+    <script src="../webview.js"></script>
+  </body>
+</html>
